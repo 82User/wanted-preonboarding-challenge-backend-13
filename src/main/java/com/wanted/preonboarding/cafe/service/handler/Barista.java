@@ -25,10 +25,9 @@ public class Barista {
             int quantity = orders.get(coffeeName);
             makeOrders.append(coffeeName)
                     .append(":")
-                    .append(quantity);
+                    .append(quantity)
+                    .append("\n");
         }
         return makeOrders.toString();
     }
-
-
 }

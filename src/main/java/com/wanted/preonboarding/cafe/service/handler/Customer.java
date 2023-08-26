@@ -1,8 +1,13 @@
 package com.wanted.preonboarding.cafe.service.handler;
 
+import lombok.Builder;
+import lombok.Getter;
+
 import java.util.HashMap;
 import java.util.Map;
 
+@Builder
+@Getter
 public class Customer {
     private String paymentMethod;
     private final Map<String, Integer> myOrders;
@@ -16,8 +21,8 @@ public class Customer {
         this.paymentMethod = paymentMethod;
     }
 
-    public String buyCoffee(Cashier cashier) {
-        long totalPrice = cashier.calculateTotalPrice(myOrders);
-        return cashier.takeOrder(myOrders, totalPrice);
-    }
+//    public String buyCoffee(Cashier cashier) {
+//        long totalPrice = cashier.calculateTotalPrice(myOrders);
+//        return cashier.takeOrder(myOrders, totalPrice);
+//    }
 }
